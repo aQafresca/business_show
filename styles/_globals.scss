@@ -33,6 +33,7 @@ h1 {
   @include fluid-text(24, 20);
 
   font-family: var(--f-family-logo), sans-serif;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -69,4 +70,9 @@ button {
   &:active {
     filter: brightness(80%);
   }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,0 +1,59 @@
+@use '../helpers/media' as *;
+@use '../helpers/functions' as *;
+@use '../helpers/mixins' as *;
+
+.header {
+  display: flex;
+  width: 100%;
+  max-width: rem(1440);
+  margin: 0 auto;
+
+  &__body {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(24);
+    width: 100%;
+  }
+
+  &__logo {
+    padding: 0 rem(8);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__overlay {
+    @include mobile-above {
+      display: contents;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &-list {
+      display: flex;
+      gap: rem(16);
+
+      @include tablet {
+        gap: rem(5);
+      }
+    }
+
+    &-item {
+      @include fluid-text(16, 14);
+
+      padding: 0 rem(8);
+      letter-spacing: rem(.5);
+      font-weight: 400;
+    }
+  }
+
+  &__button {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+}
