@@ -1,0 +1,72 @@
+@use "variables" as *;
+@use "helpers/mixins" as *;
+@use "helpers/functions" as *;
+@use "helpers/media" as *;
+
+
+
+body {
+  @include fluid-text(18, 14);
+
+  font-family: var(--f-family-base), sans-serif;
+  line-height: 1.6;
+}
+
+h3, .h3,
+h4, .h4 {
+  font-weight: bold;
+}
+
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  line-height: 1.4;
+}
+
+h1, .h1,
+h4, .h4,
+h5, .h5 {
+  color: var(--color-accent);
+}
+
+h1 {
+  @include fluid-text(24, 20);
+
+  font-family: var(--f-family-logo), sans-serif;
+}
+
+h2 {
+  @include fluid-text(72, 30);
+
+  line-height: 1.1;
+  font-family: var(--f-family-accent), sans-serif;
+}
+
+h3 {
+  @include fluid-text(22, 16);
+
+  font-weight: bold;
+}
+
+h4 {
+  font-size: rem(16);
+}
+
+h5 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+a,
+button {
+  transition: var(--transition-duration);
+  cursor: pointer;
+
+  @include hover {
+    filter: brightness(120%);
+  }
+
+  &:active {
+    filter: brightness(80%);
+  }
+}

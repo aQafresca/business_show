@@ -1,0 +1,18 @@
+@use "helpers/functions" as *;
+
+:root {
+  --color-light: #FFFFFF;
+  --color-dark: #000000;
+  --color-accent: #2AD18A;
+  --color-gray: #E8EAED;
+  --color-gray-dark: #9DA3AE;
+
+  --f-family-base: 'Inter';
+  --f-family-accent: 'League Gothic';
+  --f-family-logo: 'Poppins';
+
+  --transition-duration: .2s;
+
+  --container-width: #{rem(1280)};
+  --container-padding-x: #{rem(16)};
+}
