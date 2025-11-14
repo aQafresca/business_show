@@ -1,0 +1,48 @@
+@use '../helpers/mixins' as *;
+@use '../helpers/functions' as *;
+
+.burger-button {
+  @include square(rem(44));
+
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: rem(8) rem(4);
+  color: var(--color-accent);
+  background-color: transparent;
+  border: none;
+
+  &__line {
+    background-color: currentColor;
+    width: 100%;
+    height: rem(2);
+    border-radius: rem(10);
+    transition-duration: var(--transition-duration);
+
+    &:nth-child(2) {
+      width: 55%;
+      align-self: end;
+    }
+  }
+
+  &.is-active {
+    .burger-button__line {
+
+      &:first-child {
+        rotate: 45deg;
+        translate: 0 .9em;
+      }
+
+      &:nth-child(2) {
+        width: 0;
+      }
+
+      &:last-child {
+        rotate: -45deg;
+        translate: 0 -.8em;
+      }
+    }
+  }
+}
