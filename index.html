@@ -8,9 +8,44 @@
   <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
-<header class="header"></header>
-<main class="main">sdfsdfdsf
-<h2>sfsdfsd</h2>
+<header class="header" data-js-header>
+  <div class="header__body">
+    <a class="header__logo" href="#" title="home" aria-label="Home">
+      <h1>Show business</h1>
+    </a>
+    <div class="header__overlay" data-js-header-overlay>
+      <nav class="header__menu">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Home</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Explore</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Inspiration</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="header__button button">Log in</button>
+    </div>
+    <button
+      class="header__burger-button burger-button visible-mobile"
+      type="button"
+      aria-label="Burger menu"
+      title="Burger menu"
+      data-js-burger-button
+    >
+      <span class="burger-button__line"></span>
+      <span class="burger-button__line"></span>
+      <span class="burger-button__line"></span>
+    </button>
+  </div>
+</header>
+<main class="main">
 </main>
 <footer class="footer"></footer>
 </body>
