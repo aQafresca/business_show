@@ -15,6 +15,10 @@
     align-items: center;
     padding: 0 rem(24);
     width: 100%;
+
+    @include mobile {
+      padding: 0 rem(10);
+    }
   }
 
   &__logo {
@@ -27,12 +31,33 @@
     @include mobile-above {
       display: contents;
     }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      inset: 0;
+      background-color: var(--color-light);
+      padding: rem(10);
+      row-gap: rem(30);
+      transition-duration: var(--transition-duration);
+
+      &:not(.is-active) {
+        @include hide;
+
+        translate: 100%;
+      }
+    }
   }
 
   &__menu {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    @include mobile-above {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
 
     &-list {
       display: flex;
@@ -40,6 +65,13 @@
 
       @include tablet {
         gap: rem(5);
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        gap: rem(20);
+        overflow: auto;
       }
     }
 
@@ -55,5 +87,11 @@
   &__button {
     background-color: var(--color-accent);
     color: var(--color-light);
+
+    @include mobile {
+      width: 100%;
+      max-width: rem(300);
+      align-self: center;
+    }
   }
 }
