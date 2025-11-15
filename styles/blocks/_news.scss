@@ -1,0 +1,87 @@
+@use '../helpers/functions' as *;
+@use '../helpers/media' as *;
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: rem(80);
+
+  @include mobile {
+    gap: rem(40);
+  }
+
+   &__inner {
+      display: flex;
+      gap: rem(40);
+
+
+     &:nth-child(even) {
+       .news__primary {
+         order: 2;
+       }
+       .news__secondary {
+         order: 1;
+       }
+     }
+
+     @include mobile {
+       gap: rem(20);
+     }
+
+     @media (max-width: 1111px) {
+       flex-direction: column;
+       &:nth-child(even) {
+         .news__primary {
+           order: 1;
+         }
+         .news__secondary {
+           order: 2;
+         }
+       }
+     }
+   }
+
+  &__primary {
+    display: grid;
+    max-width: rem(620);
+    row-gap: rem(14);
+
+    @include mobile-m-above {
+      margin: 0 auto;
+    }
+
+    &-text {
+      letter-spacing: rem(.5);
+    }
+  }
+
+  &__secondary {
+    display: flex;
+    flex-direction: column;
+    max-height: rem(606);
+    gap: rem(18);
+
+    @include mobile-m-above {
+      margin: 0 auto;
+    }
+
+    &-title {
+      padding-left: rem(48);
+      letter-spacing: rem(.4);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+
+      @include mobile-m {
+        gap: rem(10);
+      }
+    }
+
+    &-item {
+      height: rem(124);
+    }
+  }
+}
