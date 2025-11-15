@@ -50,7 +50,7 @@ h2 {
 h3 {
   @include fluid-text(22, 16);
 
-  font-weight: bold;
+  letter-spacing: rem(.1);
 }
 
 h4 {
@@ -59,7 +59,8 @@ h4 {
 
 h5 {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: rem(.5);
 }
 
 a,
