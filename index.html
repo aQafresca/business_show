@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Selection of the latest news">
   <meta property="og:type" content="website">
   <meta property="og:title" content="best news">
   <meta property="og:description" content="Selection of the latest news">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=League+Gothic&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
   <title>Business Show</title>
-  <script src="./scripts/main.js" type="module"></script>
 </head>
 <body>
 <header class="header" data-js-header>
@@ -59,6 +61,7 @@
           class="news__primary-img"
           width="620"
           height="409"
+          fetchpriority="high"
         >
         <h2 class="news__primary-title">Princess Beatrice's Wedding</h2>
         <p class="news__primary-text">Coverage of Princess Beatrice's wedding to Edoardo Mapelli Mozzi in July 2020. Coverage of Princess Beatrice's wedding to Edoardo Mapelli.</p>
@@ -634,5 +637,6 @@
     </ul>
   </div>
 </footer>
+<script src="./scripts/main.js" type="module"></script>
 </body>
 </html>
