@@ -432,6 +432,14 @@ a {
     overflow: hidden;
   }
 }
+@media (width <= 47.99875rem) {
+  .news__primary-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
 .news__secondary {
   display: flex;
   flex-direction: column;
