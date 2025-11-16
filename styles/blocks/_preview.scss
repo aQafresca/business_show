@@ -19,13 +19,18 @@
     gap: rem(16);
     min-height: rem(395);
 
-    @include mobile-m {
-      min-height: rem(365);
+    @include mobile {
+      min-height: rem(364);
+      gap: rem(10);
     }
 
     &-text {
       letter-spacing: rem(.5);
       margin-top: auto;
+
+      @include mobile {
+        margin-top: 0;
+      }
     }
   }
 }
