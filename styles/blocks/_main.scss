@@ -4,9 +4,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  gap: rem(80);
 
   @include mobile {
-    gap: rem(0);
+    gap: rem(20);
   }
 }

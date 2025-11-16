@@ -1,5 +1,4 @@
 @use 'normalize';
-@use 'fonts';
 @use 'variables';
 @use 'utils';
 @use 'globals';
@@ -11,3 +10,4 @@
 @use 'blocks/news';
 @use 'blocks/stories';
 @use 'blocks/preview';
+@use 'blocks/footer';
