@@ -33,6 +33,7 @@
     flex-grow: 1;
     max-width: rem(355);
     gap: rem(8);
+    padding-top: 1px;
   }
 
   &__title {
@@ -45,16 +46,15 @@
   &__meta {
     display: flex;
     color: var(--color-gray-dark);
-    gap: rem(10);
+    gap: rem(8);
 
     &-time {
       @include fluid-text(16, 14);
 
       align-self: center;
-      padding-right: rem(10);
+      padding-right: rem(12);
       border-right: rem(1) solid var(--color-gray-dark);
       line-height: 1.4;
-      letter-spacing: rem(.7);
     }
 
     &-comments {
