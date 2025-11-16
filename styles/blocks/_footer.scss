@@ -1,0 +1,33 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/functions" as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: rem(251);
+  border-top: rem(1) solid var(--color-gray-dark);
+  margin-top: rem(80);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: rem(24);
+
+    &-logo {
+      @include fluid-text(24, 18);
+
+      font-family: var(--f-family-logo), sans-serif;
+      font-weight: 600;
+    }
+
+    &-list {
+      @include fluid-text(18, 14);
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(7);
+      text-transform: uppercase;
+    }
+  }
+}
