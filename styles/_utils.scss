@@ -3,14 +3,9 @@
 @use 'helpers/functions' as *;
 
 .container {
-  @include mobile {
-    margin-top: rem(10);
-  }
-
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
-  margin-top: rem(40);
 }
 
 .visual-hidden {

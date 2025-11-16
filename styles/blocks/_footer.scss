@@ -1,0 +1,42 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/functions" as *;
+@use "../helpers/media" as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  border-top: rem(1) solid var(--color-gray-dark);
+  margin-top: rem(80);
+
+  @include mobile {
+    margin-top: rem(10);
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: rem(24);
+    padding: rem(80) rem(16);
+
+    @include mobile {
+      padding: rem(20) rem(16);
+    }
+
+    &-logo {
+      @include fluid-text(24, 18);
+
+      font-family: var(--f-family-logo), sans-serif;
+      font-weight: 600;
+    }
+
+    &-list {
+      @include fluid-text(18, 14);
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(7);
+      text-transform: uppercase;
+    }
+  }
+}

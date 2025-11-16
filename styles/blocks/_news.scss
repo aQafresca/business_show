@@ -5,9 +5,11 @@
   display: flex;
   flex-direction: column;
   gap: rem(80);
+  margin-top: rem(40);
 
   @include mobile {
-    gap: rem(40);
+    gap: rem(20);
+    margin-top: rem(10);
   }
 
    &__inner {
@@ -52,6 +54,13 @@
 
     &-text {
       letter-spacing: rem(.5);
+
+      @include mobile {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
     }
   }
 
@@ -76,7 +85,7 @@
       gap: rem(24);
 
       @include mobile-m {
-        gap: rem(10);
+        gap: rem(0);
       }
     }
 
