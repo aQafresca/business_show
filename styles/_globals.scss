@@ -22,21 +22,16 @@ h4, .h4 {
 }
 
 h3, .h3,
-h4, .h4,
-h5, .h5 {
+h4, .h4 {
   line-height: 1.4;
 }
 
+
 h1, .h1,
-h4, .h4,
-h5, .h5 {
+h3, .h3 {
   color: var(--color-accent);
 }
 
-h4, .h4,
-h5, .h5 {
-  font-size: rem(16);
-}
 
 h1 {
   @include fluid-text(24, 20);
@@ -54,12 +49,11 @@ h2 {
 }
 
 h3 {
-  @include fluid-text(22, 16);
+  font-size: rem(16);
 }
 
-h5 {
-  text-transform: uppercase;
-  font-weight: 500;
+h4 {
+  @include fluid-text(22, 16);
 }
 
 a,
