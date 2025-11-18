@@ -139,8 +139,18 @@ npm run sass-watch
 ### Performance
 
 1. Lighthouse
+
+   ![lighthouse desktop](images/readmi/lighthouse_desktop.png)
+   ![lighthouse mobile](images/readmi/lighthouse_mobile.png)
+
 2. WAVE / Axe
+
+   ![Wave performance](images/readmi/wave.jpg)
+
 3. W3C Validator
+
+   ![Validator w3](images/readmi/validator_w3.jpg)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
