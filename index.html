@@ -9,9 +9,12 @@
   <meta property="og:description" content="Selection of the latest news">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=League+Gothic&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="preload" href="./styles/style.css" as="style">
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=League+Gothic&family=Poppins:wght@400;500;600&display=swap"
+        as="style"
+        onload="this.rel='stylesheet'">
+  <link rel="preload" href="./styles/style.css" as="style" onload="this.rel='stylesheet'">
+  <link href="./styles/style.css" rel="stylesheet">
   <title>Business Show</title>
 </head>
 <body>
@@ -56,14 +59,20 @@
   <section class="news container">
     <div class="news__inner">
       <article class="news__primary">
-        <img
-          src="images/news/princess_beatrices_wedding.webp"
-          alt="Princess Beatrice's Wedding"
-          class="news__primary-img"
-          width="620"
-          height="409"
-          fetchpriority="high"
-        >
+        <picture>
+          <source
+            srcset="images/news/mobile/princess_beatrices_wedding_mobile.webp"
+            media="(max-width: 413px)"
+          />
+          <img
+            src="images/news/princess_beatrices_wedding.webp"
+            alt="Princess Beatrice's Wedding"
+            class="news__primary-img"
+            width="620"
+            height="409"
+            fetchpriority="high"
+          >
+        </picture>
         <h2 class="news__primary-title">Princess Beatrice's Wedding</h2>
         <p class="news__primary-text">Coverage of Princess Beatrice's wedding to Edoardo Mapelli Mozzi in July 2020. Coverage of Princess Beatrice's wedding to Edoardo Mapelli.</p>
       </article>
@@ -182,6 +191,11 @@
     </div>
     <div class="news__inner">
       <article class="news__primary">
+        <picture>
+          <source
+            srcset="images/news/mobile/prince_philips_passing_mobile.webp"
+            media="(max-width: 410px)"
+          />
         <img
           src="images/news/prince_philips_passing.webp"
           alt="Prince Philip's Passing"
@@ -189,6 +203,7 @@
           width="620"
           height="409"
         >
+        </picture>
         <h2 class="news__primary-title">Prince Philip's Passing</h2>
         <p class="news__primary-text">Reflections and tributes following the death of Prince Philip, Duke of Edinburgh, in April 2021.</p>
       </article>
@@ -307,14 +322,20 @@
     </div>
     <div class="news__inner">
       <article class="news__primary">
-        <img
-          src="images/news/lady_gaga.webp"
-          alt="Lady Gaga"
-          class="news__primary-img"
-          width="620"
-          height="409"
-          loading="lazy"
-        >
+        <picture>
+          <source
+            srcset="images/news/mobile/lady_gaga_mobile.webp"
+            media="(max-width: 410px)"
+          />
+          <img
+            src="images/news/lady_gaga.webp"
+            alt="Lady Gaga"
+            class="news__primary-img"
+            width="620"
+            height="409"
+            loading="lazy"
+          >
+        </picture>
         <h2 class="news__primary-title">Lady Gaga in "House of Gucci"</h2>
         <p class="news__primary-text">News and reviews surrounding Lady Gaga's performance in the film "House of Gucci," where she portrays Patrizia Reggiani. Lady Gaga's performance. </p>
       </article>
@@ -333,8 +354,9 @@
                     <img src="images/svg/chat.svg"
                          alt="comments svg"
                          width="16"
-                         height="16">
+                         height="16"
                          loading="lazy"
+                    >
                     <span>87</span>
                   </span>
                 </div>
